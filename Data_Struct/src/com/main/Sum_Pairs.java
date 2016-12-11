@@ -39,6 +39,9 @@ public class Sum_Pairs {
 
 	}
 
+	//Captures the values keyed in by user in String array UserInputListStr and parses into integer format and saves in Integer array UserInputList. 
+	//In case of wrong input UserInputTarget is set to 999. 
+	//Pgm exits if UserInputTarget is 999 else prompts the user to key in the target value 
 	public static int User_Inputs_List(List<String> UserInputListStr, ArrayList<Integer> UserInputList){
 
 		int UserInputTarget = 0;
@@ -60,7 +63,8 @@ public class Sum_Pairs {
 		return UserInputTarget;
 
 	} 
-
+	
+// Scans the target value keyed in by the user and saves in integer format in UserInputTarget. In case of wrong input, UserInputTarget is set to 999
 	public static int User_Inputs_Target(Scanner Scan1){
 		int UserInputTarget = 0;
 
@@ -69,8 +73,7 @@ public class Sum_Pairs {
 
 		}catch (Exception e ) {		   
 			System.out.println("User entered an unexpected data type. Only Integers are allowed. Please try again");
-			UserInputTarget=999;
-		//	System.exit(0);   	 
+			UserInputTarget=999;  	 
 		}
 		return UserInputTarget;	   
 
