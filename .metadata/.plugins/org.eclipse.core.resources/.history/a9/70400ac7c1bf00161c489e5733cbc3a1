@@ -1,0 +1,91 @@
+package com.main;
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+import junit.framework.Assert;
+
+public class FindNthElementTest {
+
+	@Test
+	public void test_1() {
+		java.util.LinkedList<String>  TestDataList = new   java.util.LinkedList<String>();
+		
+		TestDataList.add("1");
+		TestDataList.add("2");
+		TestDataList.add("3");
+		TestDataList.add("4");
+		TestDataList.add("5");
+		TestDataList.add("6");
+		TestDataList.add("7");
+
+		String Actual=FindNthElement.nthElement(TestDataList);
+		Assert.assertEquals(TestDataList.get(2), Actual);
+
+	}
+
+	@Test
+	public void test_2() {
+		java.util.LinkedList<String>  TestDataList = new   java.util.LinkedList<String>();
+	
+		TestDataList.add("0");
+		TestDataList.add("0");
+		TestDataList.add("0");
+		TestDataList.add("0");
+		TestDataList.add("0");
+		TestDataList.add("0");
+		TestDataList.add("0");
+
+		String Actual=FindNthElement.nthElement(TestDataList);
+		Assert.assertEquals(TestDataList.get(1), Actual);
+
+	}
+	@Test
+	public void test_3() {
+		java.util.LinkedList<String>  TestDataList = new   java.util.LinkedList<String>();
+		
+		TestDataList.add("T");
+		TestDataList.add("E");
+		TestDataList.add("S");
+		TestDataList.add("T");
+		TestDataList.add("1");
+		TestDataList.add("2");
+		TestDataList.add("3");
+
+		String Actual=FindNthElement.nthElement(TestDataList);
+		Assert.assertEquals(TestDataList.get(2), Actual);
+
+	}
+	@Test
+	public void test_4() {
+		java.util.LinkedList<String>  TestDataList = new   java.util.LinkedList<String>();
+
+		TestDataList.add("T");
+		TestDataList.add("E");
+		TestDataList.add("S");
+		TestDataList.add("T");
+
+
+		String Actual=FindNthElement.nthElement(TestDataList);
+		Assert.assertEquals("Atleast 5 elemets are required to perform the operation", Actual);
+
+	}
+
+	@Test
+	public void test_5() {
+		java.util.LinkedList<String>  TestDataList = new   java.util.LinkedList<String>();
+	
+		TestDataList.add("T");
+		TestDataList.add("E");
+		TestDataList.add("S");
+		TestDataList.add("T");
+		TestDataList.add("1");
+
+		String Actual=FindNthElement.nthElement(TestDataList);
+		Assert.assertEquals(TestDataList.get(0), Actual);
+
+	}
+
+}
